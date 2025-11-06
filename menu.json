@@ -1,0 +1,490 @@
+[
+  {
+    "id": "veg-thali",
+    "name": "Veg Thali",
+    "category": "Thali",
+    "price": 149,
+    "img": "/images/Veg Thali.jpeg",
+    "desc": "Dal, sabzi, roti, rice, salad and pickle.",
+    "veg": true,
+    "tags": [
+      "lunch",
+      "north-indian"
+    ],
+    "spice": 1,
+    "bestseller": true
+  },
+  {
+    "id": "paneer-thali",
+    "name": "Paneer Thali",
+    "category": "Thali",
+    "price": 179,
+    "img": "/images/paneer-thali.jpeg",
+    "desc": "Paneer curry, dal, roti, rice, salad.",
+    "veg": true,
+    "tags": [
+      "lunch",
+      "paneer"
+    ],
+    "spice": 2
+  },
+  {
+    "id": "mini-thali",
+    "name": "Mini Thali",
+    "category": "Thali",
+    "price": 149,
+    "img": "/images/Mini-veg-thali.jpeg",
+    "desc": "Dal, sabzi, two rotis and salad.",
+    "veg": true,
+    "tags": [
+      "lunch",
+      "light-meal"
+    ],
+    "spice": 1
+  },
+  {
+    "id": "deluxe-thali",
+    "name": "Deluxe Thali",
+    "category": "Thali",
+    "price": 229,
+    "img": "/images/deluxe-thali.jpeg",
+    "desc": "Paneer, dal makhani, veg curry, naan, rice, dessert.",
+    "veg": true,
+    "tags": [
+      "dinner",
+      "special"
+    ],
+    "spice": 1,
+    "bestseller": true
+  },
+  {
+    "id": "rajma-chawal",
+    "name": "Rajma Chawal",
+    "category": "Rice Bowls",
+    "price": 129,
+    "img": "/images/rajma-chawal.jpeg",
+    "desc": "Comforting rajma served with steamed rice.",
+    "veg": true,
+    "tags": [
+      "lunch",
+      "north-indian"
+    ],
+    "spice": 1,
+    "bestseller": true
+  },
+  {
+    "id": "choley-chawal",
+    "name": "choley Chawal",
+    "category": "Rice Bowls",
+    "price": 129,
+    "img": "/images/choley-chawal.jpeg",
+    "desc": "Comforting choley served with steamed rice.",
+    "veg": true,
+    "tags": [
+      "lunch",
+      "north-indian"
+    ],
+    "spice": 1,
+    "bestseller": true
+  },
+  {
+    "id": "kadhi-chawal",
+    "name": "Kadhi Chawal",
+    "category": "Rice Bowls",
+    "price": 119,
+    "img": "/images/kadhi-chawal.jpeg",
+    "desc": "Tangy kadhi with fluffy steamed rice.",
+    "veg": true,
+    "tags": [
+      "lunch",
+      "comfort-food"
+    ],
+    "spice": 1
+  },
+  {
+    "id": "jeera-rice-dal",
+    "name": "Jeera Rice with Dal Tadka",
+    "category": "Rice Bowls",
+    "price": 129,
+    "img": "/images/jeera-rice-dal.jpeg",
+    "desc": "Jeera rice served with spicy dal tadka.",
+    "veg": true,
+    "tags": [
+      "lunch",
+      "dinner"
+    ],
+    "spice": 2
+  },
+  {
+    "id": "veg-biryani",
+    "name": "Veg Biryani",
+    "category": "Rice Bowls",
+    "price": 169,
+    "img": "/images/veg-biryani.jpeg",
+    "desc": "Aromatic basmati rice with mixed vegetables.",
+    "veg": true,
+    "tags": [
+      "dinner",
+      "spicy"
+    ],
+    "spice": 2,
+    "bestseller": true
+  },
+  {
+    "id": "veg-pulao",
+    "name": "Veg Pulao",
+    "category": "Rice Bowls",
+    "price": 139,
+    "img": "/images/veg-pulao.jpeg",
+    "desc": "Lightly spiced basmati rice with vegetables.",
+    "veg": true,
+    "tags": [
+      "lunch",
+      "light-meal"
+    ],
+    "spice": 1
+  },
+  {
+    "id": "aloo-paratha",
+    "name": "Aloo Paratha (2 pcs)",
+    "category": "Breads",
+    "price": 89,
+    "img": "/images/aloo-paratha.jpeg",
+    "desc": "Stuffed potato parathas with curd and pickle.",
+    "veg": true,
+    "tags": [
+      "breakfast",
+      "north-indian"
+    ],
+    "spice": 1,
+    "bestseller": true
+  },
+  {
+    "id": "paneer-paratha",
+    "name": "Paneer Paratha (2 pcs)",
+    "category": "Breads",
+    "price": 99,
+    "img": "/images/paneer-paratha.jpeg",
+    "desc": "Paneer-stuffed parathas with curd and pickle.",
+    "veg": true,
+    "tags": [
+      "breakfast",
+      "paneer"
+    ],
+    "spice": 1
+  },
+  {
+    "id": "sav-paratha",
+    "name": "sav Paratha (2 pcs)",
+    "category": "Breads",
+    "price": 99,
+    "img": "/images/sav-paratha.jpeg",
+    "desc": "sav-stuffed parathas with curd and pickle.",
+    "veg": true,
+    "tags": [
+      "breakfast",
+      "paneer"
+    ],
+    "spice": 1
+  },
+  {
+    "id": "gobhi-paratha",
+    "name": "gobhi Paratha (2 pcs)",
+    "category": "Breads",
+    "price": 99,
+    "img": "/images/onion-paratha.jpeg",
+    "desc": "gophi-stuffed parathas with curd and pickle.",
+    "veg": true,
+    "tags": [
+      "breakfast",
+      "paneer"
+    ],
+    "spice": 1
+  },
+  {
+    "id": "onion-paratha",
+    "name": "onion Paratha (2 pcs)",
+    "category": "Breads",
+    "price": 99,
+    "img": "/images/onion-paratha.jpeg",
+    "desc": "onion-stuffed parathas with curd and pickle.",
+    "veg": true,
+    "tags": [
+      "breakfast",
+      "paneer"
+    ],
+    "spice": 1
+  },
+  {
+    "id": "tandoori-roti",
+    "name": "Tandoori Roti (2 pcs)",
+    "category": "Breads",
+    "price": 40,
+    "img": "/images/tandoori-roti.jpeg",
+    "desc": "Soft tandoori rotis brushed with ghee.",
+    "veg": true,
+    "tags": [
+      "dinner",
+      "sides"
+    ],
+    "spice": 0
+  },
+  {
+    "id": "butter-naan",
+    "name": "Butter Naan",
+    "category": "Breads",
+    "price": 45,
+    "img": "/images/butter-naan.jpeg",
+    "desc": "Tandoor-baked naan glazed with butter.",
+    "veg": true,
+    "tags": [
+      "dinner",
+      "bread"
+    ],
+    "spice": 0,
+    "bestseller": true
+  },
+  {
+    "id": "garlic-naan",
+    "name": "Garlic Naan",
+    "category": "Breads",
+    "price": 55,
+    "img": "/images/garlic-naan.jpeg",
+    "desc": "Garlic and coriander flavored naan.",
+    "veg": true,
+    "tags": [
+      "dinner",
+      "bread"
+    ],
+    "spice": 0
+  },
+  {
+    "id": "paneer-butter-masala",
+    "name": "Paneer Butter Masala",
+    "category": "Curries",
+    "price": 169,
+    "img": "/images/paneer-butter-masala.jpeg",
+    "desc": "Creamy tomato-based paneer curry.",
+    "veg": true,
+    "tags": [
+      "dinner",
+      "paneer"
+    ],
+    "spice": 1,
+    "bestseller": true
+  },
+  {
+    "id": "dal-makhani",
+    "name": "Dal Makhani",
+    "category": "Curries",
+    "price": 159,
+    "img": "/images/dal-makhani.jpeg",
+    "desc": "Slow-cooked black lentils in buttery gravy.",
+    "veg": true,
+    "tags": [
+      "dinner",
+      "north-indian"
+    ],
+    "spice": 1,
+    "bestseller": true
+  },
+  {
+    "id": "palak-paneer",
+    "name": "Palak Paneer",
+    "category": "Curries",
+    "price": 169,
+    "img": "/images/palak-paneer.jpeg",
+    "desc": "Paneer simmered in creamy spinach gravy.",
+    "veg": true,
+    "tags": [
+      "lunch",
+      "paneer"
+    ],
+    "spice": 1
+  },
+  {
+    "id": "kadai-paneer",
+    "name": "Kadai Paneer",
+    "category": "Curries",
+    "price": 179,
+    "img": "/images/kadai-paneer.jpeg",
+    "desc": "Stir-fried paneer with capsicum and spices.",
+    "veg": true,
+    "tags": [
+      "dinner",
+      "paneer",
+      "spicy"
+    ],
+    "spice": 2
+  },
+  {
+    "id": "mix-veg-curry",
+    "name": "Mix Veg Curry",
+    "category": "Curries",
+    "price": 139,
+    "img": "/images/mix-veg-curry.jpeg",
+    "desc": "Seasonal vegetables cooked in mild spices.",
+    "veg": true,
+    "tags": [
+      "lunch",
+      "dinner"
+    ],
+    "spice": 1
+  },
+  {
+    "id": "chole-masala",
+    "name": "Chole Masala",
+    "category": "Curries",
+    "price": 129,
+    "img": "/images/chole-masala.jpeg",
+    "desc": "Spicy chickpea curry with Punjabi flavors.",
+    "veg": true,
+    "tags": [
+      "lunch",
+      "north-indian"
+    ],
+    "spice": 2
+  },
+  {
+    "id": "veg-korma",
+    "name": "Veg Korma",
+    "category": "Curries",
+    "price": 169,
+    "img": "/images/veg-korma.jpeg",
+    "desc": "Rich cashew-based gravy with mixed vegetables.",
+    "veg": true,
+    "tags": [
+      "dinner",
+      "rich"
+    ],
+    "spice": 1
+  },
+  {
+    "id": "boondi-raita",
+    "name": "Boondi Raita",
+    "category": "Sides",
+    "price": 49,
+    "img": "/images/boondi-raita.jpeg",
+    "desc": "Chilled curd with crunchy boondi.",
+    "veg": true,
+    "tags": [
+      "sides",
+      "cooling"
+    ],
+    "spice": 0
+  },
+  {
+    "id": "green-salad",
+    "name": "Green Salad",
+    "category": "Sides",
+    "price": 39,
+    "img": "/images/green-salad.jpeg",
+    "desc": "Fresh cucumber, tomato, onion and lemon.",
+    "veg": true,
+    "tags": [
+      "sides",
+      "healthy"
+    ],
+    "spice": 0
+  },
+  {
+    "id": "papad",
+    "name": "Roasted Papad (2 pcs)",
+    "category": "Sides",
+    "price": 29,
+    "img": "/images/papad.jpeg",
+    "desc": "Crispy roasted papad with masala sprinkle.",
+    "veg": true,
+    "tags": [
+      "sides",
+      "snack"
+    ],
+    "spice": 1
+  },
+  {
+    "id": "masala-chaas",
+    "name": "Masala Chaas",
+    "category": "Beverages",
+    "price": 39,
+    "img": "/images/masala-chaas.jpeg",
+    "desc": "Spiced buttermilk with roasted cumin.",
+    "veg": true,
+    "tags": [
+      "beverages",
+      "cooling"
+    ],
+    "spice": 0
+  },
+  {
+    "id": "sweet-lassi",
+    "name": "Sweet Lassi",
+    "category": "Beverages",
+    "price": 49,
+    "img": "/images/sweet-lassi.jpeg",
+    "desc": "Thick, sweet Punjabi-style lassi.",
+    "veg": true,
+    "tags": [
+      "beverages",
+      "dessert"
+    ],
+    "spice": 0,
+    "bestseller": true
+  },
+  {
+    "id": "mango-lassi",
+    "name": "Mango Lassi",
+    "category": "Beverages",
+    "price": 69,
+    "img": "/images/mango-lassi.jpeg",
+    "desc": "Creamy mango yogurt smoothie.",
+    "veg": true,
+    "tags": [
+      "beverages",
+      "summer"
+    ],
+    "spice": 0
+  },
+  {
+    "id": "lemon-shikanji",
+    "name": "Lemon Shikanji",
+    "category": "Beverages",
+    "price": 35,
+    "img": "/images/lemon-shikanji.jpeg",
+    "desc": "Refreshing lemon drink with spices.",
+    "veg": true,
+    "tags": [
+      "beverages",
+      "summer"
+    ],
+    "spice": 0
+  },
+  {
+    "id": "gulab-jamun",
+    "name": "Gulab Jamun",
+    "category": "Desserts",
+    "price": 99,
+    "img": "/images/gulab-jamun.jpeg",
+    "desc": "Soft milk dumplings soaked in rose syrup.",
+    "veg": true,
+    "tags": [
+      "desserts",
+      "classic"
+    ],
+    "spice": 0,
+    "bestseller": true
+  },
+  {
+    "id": "kheer",
+    "name": "Kheer",
+    "category": "Desserts",
+    "price": 89,
+    "img": "/images/kheer.jpeg",
+    "desc": "Creamy rice pudding with nuts and cardamom.",
+    "veg": true,
+    "tags": [
+      "desserts",
+      "comfort"
+    ],
+    "spice": 0
+  }
+]

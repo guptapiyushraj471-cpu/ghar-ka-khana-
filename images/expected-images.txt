@@ -1,0 +1,36 @@
+Place these files in /images/ (JPEG, names must match):
+
+- veg-thali.jpeg
+- paneer-thali.jpeg
+- mini-thali.jpeg
+- deluxe-thali.jpeg
+- rajma-chawal.jpeg
+- choley-chawal.jpeg
+- kadhi-chawal.jpeg
+- jeera-rice-dal.jpeg
+- veg-biryani.jpeg
+- veg-pulao.jpeg
+- aloo-paratha.jpeg
+- paneer-paratha.jpeg
+- sav-paratha.jpeg
+- gobhi-paratha.jpeg
+- onion-paratha.jpeg
+- tandoori-roti.jpeg
+- butter-naan.jpeg
+- garlic-naan.jpeg
+- paneer-butter-masala.jpeg
+- dal-makhani.jpeg
+- palak-paneer.jpeg
+- kadai-paneer.jpeg
+- mix-veg-curry.jpeg
+- chole-masala.jpeg
+- veg-korma.jpeg
+- boondi-raita.jpeg
+- green-salad.jpeg
+- papad.jpeg
+- masala-chaas.jpeg
+- sweet-lassi.jpeg
+- mango-lassi.jpeg
+- lemon-shikanji.jpeg
+- gulab-jamun.jpeg
+- kheer.jpeg

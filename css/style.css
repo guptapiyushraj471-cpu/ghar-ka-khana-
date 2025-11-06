@@ -1,0 +1,244 @@
+/* === Ghar ka Khana — style.css === */
+:root {
+  --bg: #f9fafb;
+  --text: #111827;
+  --muted: #6b7280;
+  --accent: #16a34a;
+  --accent-hover: #15803d;
+  --border: #e5e7eb;
+  --card: #ffffff;
+  --error: #dc2626;
+  --radius: 12px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* === Base === */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* === Cart Section === */
+#cart-list .group,
+#cart-list .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px dashed var(--border);
+  transition: opacity 0.2s ease;
+}
+
+#cart-list .group:hover,
+#cart-list .row:hover {
+  opacity: 0.95;
+}
+
+.qty-btn,
+.remove-btn {
+  background: #f3f4f6;
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.05s ease;
+}
+
+.qty-btn:hover,
+.remove-btn:hover {
+  background: #e5e7eb;
+}
+
+.qty-btn:active,
+.remove-btn:active {
+  transform: scale(0.97);
+}
+
+.remove-btn {
+  color: var(--error);
+}
+
+/* === Total === */
+#cart-total {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 16px;
+  text-align: right;
+}
+
+/* === Order Form === */
+#order-form {
+  background: var(--card);
+  padding: 24px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-top: 24px;
+}
+
+#order-form label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: 600;
+}
+
+#order-form input,
+#order-form textarea,
+#order-form select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font: inherit;
+  background: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#order-form textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+#order-form input:focus,
+#order-form textarea:focus,
+#order-form select:focus {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2);
+}
+
+input.error,
+textarea.error,
+select.error {
+  border-color: var(--error);
+}
+
+/* === Buttons === */
+button,
+.btn {
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.05s ease;
+}
+
+button:hover,
+.btn:hover {
+  background: var(--accent-hover);
+}
+
+button:active,
+.btn:active {
+  transform: translateY(0.5px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+}
+
+.btn-outline:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* === Status & WhatsApp === */
+#order-status {
+  margin-top: 16px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+#wa-link {
+  display: none;
+  margin-top: 16px;
+  padding: 10px 16px;
+  background: #22c55e;
+  color: #fff;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#wa-link:hover {
+  background: #16a34a;
+}
+
+/* === Utility Classes === */
+.hidden {
+  display: none !important;
+}
+
+.opacity-50 {
+  opacity: 0.5 !important;
+}
+
+.pointer-events-none {
+  pointer-events: none !important;
+}
+
+.ring {
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15) !important;
+}
+
+.ring-red-500 {
+  border-color: var(--error) !important;
+}
+
+/* === Accessibility === */
+[aria-live] {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 3px solid rgba(22, 163, 74, 0.5);
+  outline-offset: 2px;
+}
+
+/* === Responsive Layout === */
+@media (max-width: 640px) {
+  .container {
+    padding: 12px;
+  }
+
+  #order-form {
+    padding: 16px;
+  }
+
+  #cart-list .row,
+  #cart-list .group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  #cart-total {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1024px) {
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+}

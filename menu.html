@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu – Ghar Ka Khana </title>
+  <meta name="description" content="Browse our daily pure veg menu - thalis, rice bowls, breads and more. Homestyle Indian comfort food.">
+  <link rel="icon" href="/images/logo.jpeg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { brand: '#ff6b35', brand2: '#2a9d8f' } } } };
+  </script>
+<style>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* For WebKit browsers */
+    line-clamp: 2;          /* Standard property (new spec) */
+    overflow: hidden;
+  }
+</style>
+</head>
+<body class="bg-gray-50 text-gray-900 pb-24">
+  <header class="sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-gray-200 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3">
+        <img src="/images/logo.jpeg" class="w-10 h-10" alt="Ghar ka Khana">
+        <span class="font-extrabold text-xl text-gray-900">Ghar ka Khana</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 font-semibold text-gray-700">
+        <a class="hover:text-brand transition-colors" href="/">Home</a>
+        <a class="text-brand" href="/menu.html">Menu</a>
+        <a class="hover:text-brand transition-colors" href="/order.html">Order</a>
+      </nav>
+      <a href="/order.html" class="inline-flex items-center px-5 py-2.5 rounded-xl bg-brand text-white font-bold shadow-md hover:shadow-lg hover:bg-orange-600 transition-all">
+        Order Now
+      </a>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-8">
+    <div class="mb-8">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="px-3 py-1 bg-green-100 text-brand2 rounded-full text-sm font-bold">🌿 100% Pure Veg</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900">Our Pure Veg Menu</h1>
+      <p class="mt-2 text-lg text-gray-600">Authentic homestyle dishes made fresh daily</p>
+    </div>
+
+    <!-- Filters (built dynamically from JSON categories) -->
+    <div class="mb-6">
+      <div id="filters" class="flex flex-wrap items-center gap-3">
+        <button data-filter="All" class="filter-btn px-5 py-2.5 rounded-xl font-semibold transition-all border-2 bg-brand text-white border-brand">
+          All
+        </button>
+      </div>
+    </div>
+
+    <!-- Grid -->
+    <div id="menu-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div id="loading" class="text-center py-12 col-span-full text-gray-500">
+        <div class="inline-block animate-spin rounded-full h-12 w-12 border-4 border-gray-300 border-t-brand mb-4"></div>
+        <p class="font-semibold">Loading delicious menu...</p>
+      </div>
+    </div>
+
+    <div id="empty-state" class="hidden text-center py-16 col-span-full">
+      <div class="text-6xl mb-4">🍽️</div>
+      <h3 class="text-xl font-bold text-gray-700 mb-2">No items found</h3>
+      <p class="text-gray-500">Try selecting a different category</p>
+    </div>
+  </main>
+
+  <div class="fixed bottom-0 left-0 right-0 z-20 bg-white border-t border-gray-200 shadow-lg">
+    <div class="max-w-6xl mx-auto px-4 py-4">
+      <a href="/order.html" id="view-cart-btn" class="flex items-center justify-between w-full px-6 py-4 rounded-xl bg-gradient-to-r from-brand to-orange-500 text-white font-bold shadow-lg hover:shadow-xl transition-all">
+        <span class="flex items-center gap-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+          </svg>
+          View Cart
+        </span>
+        <span id="cart-count" class="bg-white text-brand px-3 py-1 rounded-full font-bold text-sm">0 items</span>
+      </a>
+    </div>
+  </div>
+
+  <footer class="border-t border-gray-200 mt-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 py-8 text-sm text-gray-600 text-center">
+      <p>© <span id="year"></span> Ghar ka Khana • Pure Veg Homestyle Cloud Kitchen</p>
+      <p class="mt-2">FSSAI Pending • Cash/UPI Accepted</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const grid = document.getElementById("menu-grid");
+    const emptyState = document.getElementById("empty-state");
+    const loading = document.getElementById("loading");
+    const filtersWrap = document.getElementById("filters");
+
+    let ALL_ITEMS = [];
+    let activeFilter = "All";
+
+    function cardHTML(item) {
+      const img = item.img || `/images/${(item.id||'').toString()}.jpeg`;
+      const price = (item.price != null && item.price !== "") ? `₹${item.price}` : "-";
+      return `
+        <article class="bg-white rounded-2xl shadow hover:shadow-lg transition p-4 flex flex-col">
+          <div class="relative overflow-hidden rounded-xl aspect-[4/3] bg-gray-100">
+            <picture>
+              <source srcset="${img}" type="image/jpeg">
+              <img src="${img}" alt="${item.name}" loading="lazy" decoding="async"
+                   class="w-full h-full object-cover"
+                   onerror="this.onerror=null;this.src='/images/placeholder.jpeg';" />
+            </picture>
+            <span class="absolute top-3 left-3 text-xs bg-green-600 text-white px-2 py-1 rounded-full font-bold">VEG</span>
+          </div>
+          <div class="mt-4 flex-1">
+            <h3 class="font-extrabold text-lg text-gray-900">${item.name}</h3>
+            <p class="text-sm text-gray-600 mt-1 line-clamp-2">${item.desc || ""}</p>
+          </div>
+          <div class="mt-4 flex items-center justify-between">
+            <span class="font-extrabold text-lg">${price}</span>
+            <button class="px-4 py-2 rounded-xl bg-brand text-white font-bold hover:bg-orange-600 transition">Add</button>
+          </div>
+        </article>
+      `;
+    }
+
+    function render(items) {
+      grid.innerHTML = "";
+      if (!items.length) {
+        emptyState.classList.remove("hidden");
+        return;
+      }
+      emptyState.classList.add("hidden");
+      grid.insertAdjacentHTML("beforeend", items.map(cardHTML).join(""));
+    }
+
+    function applyFilter() {
+      if (activeFilter === "All") return render(ALL_ITEMS);
+      const filtered = ALL_ITEMS.filter(x => (x.category || "").toLowerCase() === activeFilter.toLowerCase());
+      render(filtered);
+    }
+
+    function buildFilters(items) {
+      const cats = Array.from(new Set(items.map(x => (x.category || "").trim()).filter(Boolean)));
+      cats.sort((a,b) => a.localeCompare(b));
+      cats.forEach(cat => {
+        const btn = document.createElement("button");
+        btn.className = "filter-btn px-5 py-2.5 rounded-xl font-semibold transition-all border-2 border-gray-300 text-gray-700 hover:border-brand hover:text-brand";
+        btn.dataset.filter = cat;
+        btn.textContent = cat;
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".filter-btn").forEach(b => {
+            b.classList.remove("bg-brand","text-white","border-brand");
+            b.classList.add("border-gray-300","text-gray-700");
+          });
+          btn.classList.add("bg-brand","text-white","border-brand");
+          btn.classList.remove("border-gray-300","text-gray-700");
+          activeFilter = cat;
+          applyFilter();
+        });
+        filtersWrap.appendChild(btn);
+      });
+    }
+
+    fetch("/menu.json", { cache: "no-store" })
+      .then(r => r.json())
+      .then(items => {
+        ALL_ITEMS = Array.isArray(items) ? items : [];
+        loading?.remove();
+        buildFilters(ALL_ITEMS);
+        applyFilter();
+      })
+      .catch(() => {
+        loading?.remove();
+        grid.innerHTML = `<div class="text-center py-12 col-span-full text-red-600 font-semibold">Failed to load menu.</div>`;
+      });
+  </script>
+</body>
+</html>

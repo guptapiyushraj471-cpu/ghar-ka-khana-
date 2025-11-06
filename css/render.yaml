@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: ghar-ka-khana
+    env: node
+    plan: free
+    buildCommand: |
+      npm ci || npm install
+    startCommand: npm run start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: ADMIN_KEY
+        generateValue: true
+      # Render provides PORT automatically; your server already uses process.env.PORT
+    healthCheckPath: /api/health
+    autoDeploy: true
+
+    # Persist /data so server.js can read/write menu.json/order.json
+    disk:
+      name: data
+      mountPath: /data
+      sizeGB: 1
+
