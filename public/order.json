@@ -8,18 +8,8 @@
       "address": "Sector 21, Indore, MP"
     },
     "items": [
-      {
-        "id": "veg-thali",
-        "name": "Veg Thali",
-        "qty": 2,
-        "price": 149
-      },
-      {
-        "id": "boondi-raita",
-        "name": "Boondi Raita",
-        "qty": 1,
-        "price": 49
-      }
+      { "id": "veg-thali", "name": "Veg Thali", "qty": 2, "price": 149 },
+      { "id": "boondi-raita", "name": "Boondi Raita", "qty": 1, "price": 49 }
     ],
     "total": 347,
     "paymentMethod": "UPI",
@@ -35,18 +25,8 @@
       "address": "MG Road, Indore"
     },
     "items": [
-      {
-        "id": "paneer-paratha",
-        "name": "Paneer Paratha (2 pcs)",
-        "qty": 1,
-        "price": 99
-      },
-      {
-        "id": "masala-chaas",
-        "name": "Masala Chaas",
-        "qty": 1,
-        "price": 39
-      }
+      { "id": "paneer-paratha", "name": "Paneer Paratha (2 pcs)", "qty": 1, "price": 99 },
+      { "id": "masala-chaas", "name": "Masala Chaas", "qty": 1, "price": 39 }
     ],
     "total": 138,
     "paymentMethod": "Cash",
@@ -62,24 +42,9 @@
       "address": "Vijay Nagar, Indore"
     },
     "items": [
-      {
-        "id": "rajma-chawal",
-        "name": "Rajma Chawal",
-        "qty": 1,
-        "price": 129
-      },
-      {
-        "id": "green-salad",
-        "name": "Green Salad",
-        "qty": 1,
-        "price": 39
-      },
-      {
-        "id": "gulab-jamun",
-        "name": "Gulab Jamun",
-        "qty": 1,
-        "price": 99
-      }
+      { "id": "rajma-chawal", "name": "Rajma Chawal", "qty": 1, "price": 129 },
+      { "id": "green-salad", "name": "Green Salad", "qty": 1, "price": 39 },
+      { "id": "gulab-jamun", "name": "Gulab Jamun", "qty": 1, "price": 99 }
     ],
     "total": 267,
     "paymentMethod": "Card",
@@ -95,18 +60,8 @@
       "address": "Scheme 54, Indore"
     },
     "items": [
-      {
-        "id": "paneer-butter-masala",
-        "name": "Paneer Butter Masala",
-        "qty": 1,
-        "price": 169
-      },
-      {
-        "id": "butter-naan",
-        "name": "Butter Naan",
-        "qty": 2,
-        "price": 45
-      }
+      { "id": "paneer-butter-masala", "name": "Paneer Butter Masala", "qty": 1, "price": 169 },
+      { "id": "butter-naan", "name": "Butter Naan", "qty": 2, "price": 45 }
     ],
     "total": 259,
     "paymentMethod": "UPI",
@@ -122,18 +77,8 @@
       "address": "Vijay Nagar, Near Sayaji Hotel"
     },
     "items": [
-      {
-        "id": "dal-makhani",
-        "name": "Dal Makhani",
-        "qty": 1,
-        "price": 159
-      },
-      {
-        "id": "jeera-rice-dal",
-        "name": "Jeera Rice with Dal Tadka",
-        "qty": 1,
-        "price": 129
-      }
+      { "id": "dal-makhani", "name": "Dal Makhani", "qty": 1, "price": 159 },
+      { "id": "jeera-rice-dal", "name": "Jeera Rice with Dal Tadka", "qty": 1, "price": 129 }
     ],
     "total": 288,
     "paymentMethod": "Card",

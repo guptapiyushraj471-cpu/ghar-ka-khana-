@@ -3,135 +3,309 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ghar ka Khana – Pure Veg Homestyle Cloud Kitchen</title>
-  <meta name="description" content="Fresh, pure veg homestyle Indian meals delivered from our cloud kitchen. Daily menu, fast delivery, and real comfort food.">
-  <link rel="icon" href="/images/logo.jpeg" />
+  <title>Ghar ka Khana | Fresh Veg Home Food Delivery Indore</title>
+  <meta name="description" content="Order fresh vegetarian home-cooked meals in Indore. Daily rotating menu, 100% pure veg thalis delivered hot in 30-45 min. FSSAI certified kitchen.">
+  <link rel="icon" href="./images/logo.jpeg" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = { theme: { extend: {
-      colors: { brand: '#ff6b35', brand2: '#2a9d8f' }
-    }}}; 
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#ff6b35',
+            brand2: '#2a9d8f',
+            warm: '#fef3e2'
+          }
+        }
+      }
+    };
   </script>
+  <style>
+    @keyframes float { 0%, 100% { transform: translateY(0px) rotate(-2deg); } 50% { transform: translateY(-10px) rotate(-2deg); } }
+    @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes scaleIn { from { opacity: 0; transform: scale(0.95); } to { transform: scale(1); opacity: 1; } }
+    .animate-float { animation: float 3s ease-in-out infinite; }
+    .animate-slide-up { animation: slideUp 0.6s ease-out forwards; }
+    .animate-scale-in { animation: scaleIn 0.5s ease-out forwards; }
+    .gradient-text {
+      background: linear-gradient(135deg, #ff6b35 0%, #ff8c5a 50%, #2a9d8f 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    .card-hover:hover { transform: translateY(-8px); }
+    .glow-on-hover { position: relative; overflow: hidden; }
+    .glow-on-hover::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: left 0.5s;
+    }
+    .glow-on-hover:hover::before { left: 100%; }
+  </style>
 </head>
-<body class="bg-white text-gray-900">
+
+<body class="bg-gradient-to-b from-white via-orange-50/30 to-white text-gray-900">
   <!-- Header -->
-  <header class="sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-gray-200 shadow-sm">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="/" class="flex items-center gap-3" aria-label="Ghar ka Khana home">
-        <img src="/images/logo.jpeg" class="w-10 h-10" alt="Ghar ka Khana logo" />
-        <span class="font-extrabold text-xl text-gray-900">Ghar ka Khana</span>
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-orange-100/50 shadow-lg shadow-orange-100/20">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="./index.html" class="flex items-center gap-3 group" aria-label="Ghar ka Khana home">
+        <div class="relative">
+          <div class="absolute inset-0 bg-brand/20 rounded-full blur-lg group-hover:bg-brand/40 transition-all"></div>
+          <img src="./images/logo.jpeg" class="w-12 h-12 relative rounded-full ring-2 ring-brand/20 group-hover:ring-brand/50 transition-all" alt="Ghar ka Khana logo" />
+        </div>
+        <span class="font-black text-2xl bg-gradient-to-r from-gray-900 via-brand to-brand2 bg-clip-text text-transparent">Ghar ka Khana</span>
       </a>
-      <nav class="hidden md:flex items-center gap-6 font-semibold text-gray-700" aria-label="Primary navigation">
-        <a class="hover:text-brand transition-colors" href="/menu.html">Menu</a>
-        <a class="hover:text-brand transition-colors" href="/order.html">Order</a>
-        <a class="hover:text-brand transition-colors" href="#why">Why Us</a>
+      <nav class="hidden md:flex items-center gap-8 font-semibold text-gray-700" aria-label="Primary navigation">
+        <a class="hover:text-brand transition-all relative group" href="./menu.html">
+          Today's Menu
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a class="hover:text-brand transition-all relative group" href="./order.html">
+          Order Now
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a class="hover:text-brand transition-all relative group" href="./#why">
+          Why Us
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand group-hover:w-full transition-all duration-300"></span>
+        </a>
       </nav>
-      <a href="/order.html" class="inline-flex items-center px-5 py-2.5 rounded-xl bg-brand text-white font-bold shadow-md hover:shadow-lg hover:bg-orange-600 transition-all">
-        Order Now
+      <a href="./order.html" class="glow-on-hover inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-gradient-to-r from-brand to-orange-500 text-white font-bold shadow-lg shadow-brand/30 hover:shadow-xl hover:shadow-brand/40 hover:scale-105 active:scale-95 transition-all focus:ring-4 focus:ring-brand/30 focus:outline-none">
+        <span>Order Now</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
       </a>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="max-w-6xl mx-auto px-4 py-16 md:py-20 grid md:grid-cols-2 gap-12 items-center">
-    <div>
-      <div class="inline-block px-3 py-1 bg-green-50 text-brand2 rounded-full text-sm font-semibold mb-4">
-        🌿 100% Pure Vegetarian
+  <!-- Hero -->
+  <section class="relative max-w-6xl mx-auto px-4 py-24 md:py-32 grid md:grid-cols-2 gap-16 items-center overflow-hidden">
+    <div class="absolute top-20 right-10 w-72 h-72 bg-brand/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 left-10 w-96 h-96 bg-brand2/5 rounded-full blur-3xl"></div>
+
+    <div class="relative z-10 animate-slide-up">
+      <div class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-warm to-orange-100 border border-brand/20 rounded-full text-sm font-bold mb-6 shadow-sm">
+        <span class="text-lg">🌿</span>
+        <span class="gradient-text">100% Pure Vegetarian</span>
       </div>
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900">
-        Pure Veg Meals,<br><span class="text-brand">Ghar Jaisa Swaad</span>
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-black leading-tight text-gray-900 mb-6">
+        Home-Cooked Meals,<br>
+        <span class="relative inline-block">
+          <span class="gradient-text">Delivered Fresh Daily</span>
+          <svg class="absolute -bottom-2 left-0 w-full" viewBox="0 0 300 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 10C50 5 100 2 150 5C200 8 250 7 298 10" stroke="#ff6b35" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </span>
       </h1>
-      <p class="mt-5 text-lg md:text-xl text-gray-600 leading-relaxed">
-        Authentic homestyle Indian meals made fresh daily with love and care—just like home.
+      <p class="text-xl md:text-2xl text-gray-600 leading-relaxed mb-8">
+        Authentic vegetarian thalis made fresh every morning.
+        <span class="font-semibold text-gray-700">No preservatives, no shortcuts</span> — just pure comfort food delivered hot.
       </p>
-      <div class="mt-8 flex flex-wrap gap-4">
-        <a href="/menu.html" class="px-6 py-3.5 rounded-xl bg-brand text-white font-bold shadow-lg hover:shadow-xl hover:bg-orange-600 transition-all">
-          Explore Menu
-        </a>
-        <a href="/order.html" class="px-6 py-3.5 rounded-xl border-2 border-brand text-brand font-bold hover:bg-brand hover:text-white transition-all">
-          Order Now
-        </a>
-      </div>
-      <div class="mt-8 flex items-center gap-3 text-sm text-gray-600" aria-label="Social proof">
-        <span class="text-xl">⭐⭐⭐⭐⭐</span>
-        <span class="font-medium">Trusted by 1,000+ happy customers</span>
-      </div>
-    </div>
-    <div class="relative">
-      <img
-        src="/images/hero.jpeg"
-        alt="Pure veg homestyle Indian food"
-        class="rounded-3xl shadow-2xl w-full"
-        loading="lazy"
-        decoding="async"
-        onerror="this.onerror=null;this.src='/images/placeholder.jpeg';"
-      />
-      <div class="absolute -bottom-4 -right-4 bg-brand2 text-white px-5 py-3 rounded-2xl shadow-xl font-bold hidden md:block">
-        Fresh Daily Menu 🍛
-      </div>
-    </div>
-  </section>
 
-  <!-- Why Us Section -->
-  <section id="why" class="max-w-6xl mx-auto px-4 py-12">
-    <div class="text-center mb-10">
-      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900">Why Choose Us</h2>
-      <p class="mt-2 text-gray-600">Homestyle food made with care, delivered fast</p>
-    </div>
-    <div class="grid sm:grid-cols-3 gap-6">
-      <div class="p-8 rounded-2xl border-2 border-gray-200 hover:border-brand hover:shadow-lg transition-all bg-white">
-        <div class="text-4xl mb-4">📅</div>
-        <h3 class="font-bold text-xl text-gray-900">Daily Menu</h3>
-        <p class="text-gray-600 mt-2 leading-relaxed">Fresh rotating menu with comfort classics—simple, tasty, and light.</p>
+      <div class="flex flex-wrap gap-4 mb-10">
+        <div class="flex items-center gap-2 text-sm font-medium text-gray-700">
+          <span class="flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600">✓</span>
+          <span>New menu daily</span>
+        </div>
+        <div class="flex items-center gap-2 text-sm font-medium text-gray-700">
+          <span class="flex items-center justify-center w-6 h-6 rounded-full bg-blue-100 text-blue-600">✓</span>
+          <span>30-45 min delivery</span>
+        </div>
+        <div class="flex items-center gap-2 text-sm font-medium text-gray-700">
+          <span class="flex items-center justify-center w-6 h-6 rounded-full bg-orange-100 text-brand">✓</span>
+          <span>FSSAI certified</span>
+        </div>
       </div>
-      <div class="p-8 rounded-2xl border-2 border-gray-200 hover:border-brand2 hover:shadow-lg transition-all bg-white">
-        <div class="text-4xl mb-4">🧼</div>
-        <h3 class="font-bold text-xl text-gray-900">Hygienic Cooking</h3>
-        <p class="text-gray-600 mt-2 leading-relaxed">Prepared in a clean, certified kitchen with quality ingredients.</p>
-      </div>
-      <div class="p-8 rounded-2xl border-2 border-gray-200 hover:border-brand hover:shadow-lg transition-all bg-white">
-        <div class="text-4xl mb-4">🚀</div>
-        <h3 class="font-bold text-xl text-gray-900">Fast Delivery</h3>
-        <p class="text-gray-600 mt-2 leading-relaxed">We cook fresh, pack carefully, and coordinate quick pickup.</p>
-      </div>
-    </div>
-  </section>
 
-  <!-- Call to Action -->
-  <section class="max-w-6xl mx-auto px-4 py-16">
-    <div class="rounded-3xl p-10 md:p-14 bg-gradient-to-br from-brand via-orange-500 to-brand2 text-white shadow-2xl">
-      <div class="max-w-2xl">
-        <h2 class="text-3xl md:text-5xl font-extrabold">Hungry Now?</h2>
-        <p class="mt-3 text-lg md:text-xl text-white/95">Order today's special menu on WhatsApp or place a quick order online.</p>
-        <div class="mt-8 flex flex-wrap gap-4">
-          <a href="https://wa.me/919999999999?text=Hi%20Ghar%20ka%20Khana%2C%20I%20want%20to%20order%20today%27s%20menu"
-             class="px-6 py-3.5 rounded-xl bg-white/20 backdrop-blur text-white font-bold hover:bg-white/30 transition-all shadow-lg">
-            📱 Order on WhatsApp
-          </a>
-          <a href="/order.html" class="px-6 py-3.5 rounded-xl bg-white text-brand font-bold hover:shadow-xl transition-all">
-            Quick Order
-          </a>
+      <div class="flex flex-wrap gap-4 mb-10">
+        <a href="./menu.html" class="glow-on-hover group inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-r from-brand to-orange-500 text-white text-lg font-bold shadow-xl shadow-brand/30 hover:shadow-2xl hover:shadow-brand/40 hover:scale-105 active:scale-95 transition-all focus:ring-4 focus:ring-brand/30 focus:outline-none">
+          <span>See Today's Menu</span>
+          <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+        </a>
+        <a href="./order.html" class="group inline-flex items-center gap-2 px-8 py-4 rounded-2xl border-3 border-brand bg-white text-brand text-lg font-bold hover:bg-brand hover:text-white shadow-lg hover:shadow-xl transition-all focus:ring-4 focus:ring-brand/30 focus:outline-none">
+          <span>Place Order</span>
+          <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+        </a>
+      </div>
+
+      <div class="flex items-center gap-4 p-4 bg-white/60 backdrop-blur-sm border border-orange-100 rounded-2xl shadow-sm">
+        <div class="flex items-center text-2xl">⭐⭐⭐⭐⭐</div>
+        <div>
+          <p class="font-bold text-gray-900">1,000+ Happy Customers</p>
+          <p class="text-sm text-gray-600">Trusted across Indore</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FIXED Hero image -->
+    <div class="relative animate-scale-in">
+      <div class="absolute -inset-4 bg-gradient-to-r from-brand/20 to-brand2/20 rounded-3xl blur-2xl"></div>
+      <div class="relative rounded-3xl shadow-2xl overflow-hidden">
+        <div class="aspect-[4/3] w-full">
+          <img
+            id="hero-img"
+            src="./images/veg-biryani.jpeg"
+            data-candidates="./images/veg-biryani.jpeg,./images/paneer-paratha.jpeg,./images/aloo-paratha.jpeg,./images/veg-thali.jpeg,./images/dal-makhani.jpeg,./images/rajma-chawal.jpeg,./images/jeera-rice-dal.jpeg,./images/boondi-raita.jpeg,./images/masala-chaas.jpeg,./images/gulab-jamun.jpeg,./images/green-salad.jpeg,./images/butter-naan.jpeg"
+            data-labels="Veg Biryani,Paneer Paratha,Aloo Paratha,Veg Thali,Dal Makhani,Rajma Chawal,Jeera Rice + Dal,Boondi Raita,Masala Chaas,Gulab Jamun,Green Salad,Butter Naan"
+            alt="Delicious vegetarian biryani and parathas from Ghar ka Khana"
+            class="w-full h-full object-cover block rounded-3xl shadow-2xl transition-transform duration-500 hover:scale-105"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </div>
+      </div>
+
+      <!-- UNDER-HERO MENU (added) -->
+      <div id="hero-menu-slider" class="mt-4 select-none">
+        <div class="flex items-center justify-between gap-3">
+          <div class="text-sm font-bold text-gray-700">
+            Now showing: <span id="hero-dish" class="text-brand">Veg Biryani</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <button id="hero-prev" class="px-3 py-1.5 rounded-lg border text-gray-700 hover:bg-gray-50">◀</button>
+            <button id="hero-next" class="px-3 py-1.5 rounded-lg border text-gray-700 hover:bg-gray-50">▶</button>
+          </div>
+        </div>
+        <div id="hero-pills" class="mt-3 flex flex-wrap gap-2">
+          <!-- pills generated by script -->
+        </div>
+      </div>
+
+      <div class="animate-float absolute -bottom-6 -right-6 bg-gradient-to-br from-brand2 to-teal-600 text-white px-6 py-4 rounded-2xl shadow-2xl font-bold hidden md:flex items-center gap-2 border-4 border-white">
+        <span class="text-2xl">🍛</span>
+        <div>
+          <p class="text-xs opacity-90">FRESH</p>
+          <p class="text-lg">Daily Menu</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="border-t border-gray-200 mt-16 bg-gray-50">
-    <div class="max-w-6xl mx-auto px-4 py-8">
-      <div class="flex flex-wrap items-center justify-between gap-4 text-sm text-gray-600">
-        <p class="font-medium">
-          © <span id="year"></span> Ghar ka Khana • Pure Veg Homestyle Cloud Kitchen
-        </p>
-        <p>
-          FSSAI Pending • Cash/UPI Accepted
-        </p>
+  <footer class="border-t border-gray-200 bg-gradient-to-b from-gray-50 to-white">
+    <div class="max-w-6xl mx-auto px-4 pt-16 pb-8">
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <img src="./images/logo.jpeg" class="w-12 h-12 rounded-full ring-2 ring-brand/20" alt="Ghar ka Khana logo" />
+            <span class="font-black text-xl gradient-text">Ghar ka Khana</span>
+          </div>
+          <p class="text-gray-600 text-sm leading-relaxed">Pure vegetarian homestyle meals delivered fresh daily. Made with love, just like home.</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-gray-900 mb-4">Quick Links</h4>
+          <div class="space-y-2">
+            <a href="./menu.html" class="block text-gray-600 hover:text-brand">Today's Menu</a>
+            <a href="./order.html" class="block text-gray-600 hover:text-brand">Order Now</a>
+            <a href="./#why" class="block text-gray-600 hover:text-brand">Why Choose Us</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-bold text-gray-900 mb-4">Contact Us</h4>
+          <div class="space-y-3 text-sm text-gray-600">
+            <p class="flex items-center gap-2"><span>📞</span><span>Questions? Call Piyush Gupta</span></p>
+            <p class="flex items-center gap-2"><span>📧</span><span>piyush@gharkakhana.com</span></p>
+            <p class="flex items-center gap-2"><span>📍</span><span>Serving Indore with love</span></p>
+          </div>
+        </div>
       </div>
-      <div class="mt-4 text-sm text-gray-500 text-center">
-        <p>📞 Contact: Piyush Gupta  | 📧 piyush@gharkakhana.com</p>
+      <div class="pt-8 border-t border-gray-200 flex flex-wrap items-center justify-between gap-4 text-sm text-gray-600">
+        <p class="font-medium">© <span id="year"></span> Ghar ka Khana • Pure Veg Homestyle Cloud Kitchen</p>
+        <p class="flex items-center gap-2">
+          <span class="inline-block w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+          FSSAI Lic. Pending • Cash/UPI Accepted
+        </p>
       </div>
     </div>
   </footer>
+
+  <script src="./js/main.js"></script>
+
+  <!-- HERO IMAGE FALLBACK SCRIPT (kept) -->
+  <script>
+    (function(){
+      const img = document.getElementById('hero-img');
+      if(!img) return;
+      const list = (img.getAttribute('data-candidates') || '').split(',').map(s => s.trim()).filter(Boolean);
+      function tryLoad(i){
+        if(i >= list.length) return;
+        const test = new Image();
+        test.onload = () => { img.src = list[i]; };
+        test.onerror = () => tryLoad(i + 1);
+        test.src = list[i];
+      }
+      img.addEventListener('error', ()=>{ img.style.objectFit='cover'; });
+      tryLoad(0);
+    })();
+  </script>
+
+  <!-- UNDER-HERO SLIDER SCRIPT (added) -->
+  <script>
+  (() => {
+    const img = document.getElementById('hero-img');
+    const dishEl = document.getElementById('hero-dish');
+    const pillsWrap = document.getElementById('hero-pills');
+    const btnPrev = document.getElementById('hero-prev');
+    const btnNext = document.getElementById('hero-next');
+    if (!img || !pillsWrap) return;
+
+    const images = (img.getAttribute('data-candidates')||'')
+      .split(',').map(s=>s.trim()).filter(Boolean);
+    const labels = (img.getAttribute('data-labels')||'')
+      .split(',').map(s=>s.trim()).filter(Boolean);
+
+    while (labels.length < images.length) labels.push('Dish');
+
+    let i = 0, timer = null;
+    const DURATION = 4000;
+
+    // build pills
+    pillsWrap.innerHTML = images.map((_, idx) =>
+      `<button data-i="${idx}" class="px-3 py-1.5 rounded-full border text-sm hover:border-brand hover:text-brand transition">
+        ${labels[idx] || 'Dish'}
+      </button>`
+    ).join('');
+
+    function setActive(index){
+      i = (index + images.length) % images.length;
+      const src = images[i];
+      const name = labels[i] || 'Dish';
+
+      const test = new Image();
+      test.onload = () => { img.src = src; };
+      test.onerror = () => { next(); };
+      test.src = src;
+
+      if (dishEl) dishEl.textContent = name;
+
+      pillsWrap.querySelectorAll('button').forEach((b, k) => {
+        const active = (k===i);
+        b.classList.toggle('bg-brand', active);
+        b.classList.toggle('text-white', active);
+        if (active) b.classList.add('border-brand'); else b.classList.remove('border-brand');
+      });
+
+      resetTimer();
+    }
+
+    function next(){ setActive(i+1); }
+    function prev(){ setActive(i-1); }
+    function resetTimer(){ clearInterval(timer); timer = setInterval(next, DURATION); }
+
+    pillsWrap.addEventListener('click', (e)=>{
+      const b = e.target.closest('button[data-i]');
+      if (!b) return;
+      setActive(+b.dataset.i);
+    });
+
+    btnNext && btnNext.addEventListener('click', next);
+    btnPrev && btnPrev.addEventListener('click', prev);
+
+    setActive(0);
+  })();
+  </script>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();

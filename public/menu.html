@@ -3,60 +3,44 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Menu – Ghar Ka Khana </title>
+  <title>Menu – Ghar Ka Khana</title>
   <meta name="description" content="Browse our daily pure veg menu - thalis, rice bowls, breads and more. Homestyle Indian comfort food.">
-  <link rel="icon" href="/images/logo.jpeg">
+  <link rel="icon" href="./images/logo.jpeg">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = { theme: { extend: { colors: { brand: '#ff6b35', brand2: '#2a9d8f' } } } };
-  </script>
-<style>
-  .line-clamp-2 {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2; /* For WebKit browsers */
-    line-clamp: 2;          /* Standard property (new spec) */
-    overflow: hidden;
-  }
-</style>
+  <script>tailwind.config={theme:{extend:{colors:{brand:'#ff6b35',brand2:'#2a9d8f'}}}};</script>
+  <style>.line-clamp-2{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden;}</style>
 </head>
-<body class="bg-gray-50 text-gray-900 pb-24">
+<body class="bg-white text-gray-900 pb-24">
   <header class="sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-gray-200 shadow-sm">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="/" class="flex items-center gap-3">
-        <img src="/images/logo.jpeg" class="w-10 h-10" alt="Ghar ka Khana">
+      <a href="./index.html" class="flex items-center gap-3">
+        <img src="./images/logo.jpeg" class="w-10 h-10" alt="Ghar ka Khana">
         <span class="font-extrabold text-xl text-gray-900">Ghar ka Khana</span>
       </a>
       <nav class="hidden md:flex items-center gap-6 font-semibold text-gray-700">
-        <a class="hover:text-brand transition-colors" href="/">Home</a>
-        <a class="text-brand" href="/menu.html">Menu</a>
-        <a class="hover:text-brand transition-colors" href="/order.html">Order</a>
+        <a class="hover:text-brand transition-colors" href="./index.html">Home</a>
+        <a class="text-brand" href="./menu.html">Menu</a>
+        <a class="hover:text-brand transition-colors" href="./order.html">Order</a>
       </nav>
-      <a href="/order.html" class="inline-flex items-center px-5 py-2.5 rounded-xl bg-brand text-white font-bold shadow-md hover:shadow-lg hover:bg-orange-600 transition-all">
-        Order Now
-      </a>
+      <a href="./order.html" class="inline-flex items-center px-5 py-2.5 rounded-xl bg-brand text-white font-bold shadow-md hover:shadow-lg hover:bg-orange-600 transition-all">Order Now</a>
     </div>
   </header>
 
   <main class="max-w-6xl mx-auto px-4 py-8">
     <div class="mb-8">
       <div class="flex items-center gap-2 mb-3">
-        <span class="px-3 py-1 bg-green-100 text-brand2 rounded-full text-sm font-bold">🌿 100% Pure Veg</span>
+        <span class="px-3 py-1 bg-green-50 text-brand2 rounded-full text-sm font-semibold">🌿 100% Pure Vegetarian</span>
       </div>
       <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900">Our Pure Veg Menu</h1>
       <p class="mt-2 text-lg text-gray-600">Authentic homestyle dishes made fresh daily</p>
     </div>
 
-    <!-- Filters (built dynamically from JSON categories) -->
     <div class="mb-6">
       <div id="filters" class="flex flex-wrap items-center gap-3">
-        <button data-filter="All" class="filter-btn px-5 py-2.5 rounded-xl font-semibold transition-all border-2 bg-brand text-white border-brand">
-          All
-        </button>
+        <button data-filter="All" class="filter-btn px-5 py-2.5 rounded-xl font-semibold transition-all border-2 bg-brand text-white border-brand">All</button>
       </div>
     </div>
 
-    <!-- Grid -->
     <div id="menu-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <div id="loading" class="text-center py-12 col-span-full text-gray-500">
         <div class="inline-block animate-spin rounded-full h-12 w-12 border-4 border-gray-300 border-t-brand mb-4"></div>
@@ -73,11 +57,9 @@
 
   <div class="fixed bottom-0 left-0 right-0 z-20 bg-white border-t border-gray-200 shadow-lg">
     <div class="max-w-6xl mx-auto px-4 py-4">
-      <a href="/order.html" id="view-cart-btn" class="flex items-center justify-between w-full px-6 py-4 rounded-xl bg-gradient-to-r from-brand to-orange-500 text-white font-bold shadow-lg hover:shadow-xl transition-all">
+      <a href="./order.html" id="view-cart-btn" class="flex items-center justify-between w-full px-6 py-4 rounded-xl bg-gradient-to-r from-brand to-orange-500 text-white font-bold shadow-lg hover:shadow-xl transition-all">
         <span class="flex items-center gap-2">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-          </svg>
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
           View Cart
         </span>
         <span id="cart-count" class="bg-white text-brand px-3 py-1 rounded-full font-bold text-sm">0 items</span>
@@ -85,100 +67,151 @@
     </div>
   </div>
 
-  <footer class="border-t border-gray-200 mt-16 bg-white">
-    <div class="max-w-6xl mx-auto px-4 py-8 text-sm text-gray-600 text-center">
-      <p>© <span id="year"></span> Ghar ka Khana • Pure Veg Homestyle Cloud Kitchen</p>
-      <p class="mt-2">FSSAI Pending • Cash/UPI Accepted</p>
+  <footer class="border-t border-gray-200 mt-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 py-8">
+      <div class="flex flex-wrap items-center justify-between gap-4 text-sm text-gray-600">
+        <p class="font-medium">© <span id="year"></span> Ghar ka Khana • Pure Veg Homestyle Cloud Kitchen</p>
+        <p>FSSAI Pending • Cash/UPI Accepted</p>
+      </div>
     </div>
   </footer>
 
+  <!-- JS -->
+  <script src="./js/main.js"></script>
+
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+    const grid=document.getElementById("menu-grid");const emptyState=document.getElementById("empty-state");const loading=document.getElementById("loading");const filtersWrap=document.getElementById("filters");let ALL_ITEMS=[];let activeFilter="All";
 
-    const grid = document.getElementById("menu-grid");
-    const emptyState = document.getElementById("empty-state");
-    const loading = document.getElementById("loading");
-    const filtersWrap = document.getElementById("filters");
+    function imgPathFromItem(item){
+      if(item.img)return item.img.startsWith('http')?item.img:(item.img.startsWith('./')||item.img.startsWith('images/')?item.img:`./${item.img}`);
+      const id=(item.id||'').toString().trim();
+      return id?`./images/${id}.jpeg`:`./images/placeholder.jpeg`;
+    }
 
-    let ALL_ITEMS = [];
-    let activeFilter = "All";
-
-    function cardHTML(item) {
-      const img = item.img || `/images/${(item.id||'').toString()}.jpeg`;
-      const price = (item.price != null && item.price !== "") ? `₹${item.price}` : "-";
+    /* ✅ FIXED PRICE HANDLING BELOW */
+    function cardHTML(item){
+      const img=imgPathFromItem(item);
+      const priceNum=parseFloat(item.price)||0;
+      const price=priceNum>0?`₹${priceNum.toFixed(0)}`:"₹0";
       return `
-        <article class="bg-white rounded-2xl shadow hover:shadow-lg transition p-4 flex flex-col">
-          <div class="relative overflow-hidden rounded-xl aspect-[4/3] bg-gray-100">
-            <picture>
-              <source srcset="${img}" type="image/jpeg">
-              <img src="${img}" alt="${item.name}" loading="lazy" decoding="async"
-                   class="w-full h-full object-cover"
-                   onerror="this.onerror=null;this.src='/images/placeholder.jpeg';" />
-            </picture>
-            <span class="absolute top-3 left-3 text-xs bg-green-600 text-white px-2 py-1 rounded-full font-bold">VEG</span>
-          </div>
-          <div class="mt-4 flex-1">
-            <h3 class="font-extrabold text-lg text-gray-900">${item.name}</h3>
-            <p class="text-sm text-gray-600 mt-1 line-clamp-2">${item.desc || ""}</p>
-          </div>
-          <div class="mt-4 flex items-center justify-between">
-            <span class="font-extrabold text-lg">${price}</span>
-            <button class="px-4 py-2 rounded-xl bg-brand text-white font-bold hover:bg-orange-600 transition">Add</button>
-          </div>
-        </article>
-      `;
+      <article class="bg-white rounded-2xl shadow hover:shadow-lg transition p-4 flex flex-col">
+        <div class="relative overflow-hidden rounded-xl aspect-[4/3] bg-gray-100">
+          <img src="${img}" alt="${item.name}" loading="lazy" decoding="async" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='./images/placeholder.jpeg';"/>
+          <span class="absolute top-3 left-3 text-xs bg-green-600 text-white px-2 py-1 rounded-full font-bold">VEG</span>
+        </div>
+        <div class="mt-4 flex-1">
+          <h3 class="font-extrabold text-lg text-gray-900">${item.name}</h3>
+          <p class="text-sm text-gray-600 mt-1 line-clamp-2">${item.desc||""}</p>
+        </div>
+        <div class="mt-4 flex items-center justify-between">
+          <span class="font-extrabold text-lg price-tag">${price}</span>
+          <button class="px-4 py-2 rounded-xl bg-brand text-white font-bold hover:bg-orange-600 transition">Add</button>
+        </div>
+      </article>`;
     }
 
-    function render(items) {
-      grid.innerHTML = "";
-      if (!items.length) {
-        emptyState.classList.remove("hidden");
-        return;
-      }
+    function render(items){
+      grid.innerHTML="";
+      if(!items.length){emptyState.classList.remove("hidden");return;}
       emptyState.classList.add("hidden");
-      grid.insertAdjacentHTML("beforeend", items.map(cardHTML).join(""));
+      grid.insertAdjacentHTML("beforeend",items.map(cardHTML).join(""));
     }
 
-    function applyFilter() {
-      if (activeFilter === "All") return render(ALL_ITEMS);
-      const filtered = ALL_ITEMS.filter(x => (x.category || "").toLowerCase() === activeFilter.toLowerCase());
+    function applyFilter(){
+      if(activeFilter==="All")return render(ALL_ITEMS);
+      const filtered=ALL_ITEMS.filter(x=>(x.category||"").toLowerCase()===activeFilter.toLowerCase());
       render(filtered);
     }
 
-    function buildFilters(items) {
-      const cats = Array.from(new Set(items.map(x => (x.category || "").trim()).filter(Boolean)));
-      cats.sort((a,b) => a.localeCompare(b));
-      cats.forEach(cat => {
-        const btn = document.createElement("button");
-        btn.className = "filter-btn px-5 py-2.5 rounded-xl font-semibold transition-all border-2 border-gray-300 text-gray-700 hover:border-brand hover:text-brand";
-        btn.dataset.filter = cat;
-        btn.textContent = cat;
-        btn.addEventListener("click", () => {
-          document.querySelectorAll(".filter-btn").forEach(b => {
+    function buildFilters(items){
+      const cats=Array.from(new Set(items.map(x=>(x.category||"").trim()).filter(Boolean)));
+      cats.sort((a,b)=>a.localeCompare(b));
+      cats.forEach(cat=>{
+        const btn=document.createElement("button");
+        btn.className="filter-btn px-5 py-2.5 rounded-xl font-semibold transition-all border-2 border-gray-300 text-gray-700 hover:border-brand hover:text-brand";
+        btn.dataset.filter=cat;btn.textContent=cat;
+        btn.addEventListener("click",()=>{
+          document.querySelectorAll(".filter-btn").forEach(b=>{
             b.classList.remove("bg-brand","text-white","border-brand");
             b.classList.add("border-gray-300","text-gray-700");
           });
           btn.classList.add("bg-brand","text-white","border-brand");
           btn.classList.remove("border-gray-300","text-gray-700");
-          activeFilter = cat;
-          applyFilter();
+          activeFilter=cat;applyFilter();
         });
         filtersWrap.appendChild(btn);
       });
     }
 
-    fetch("/menu.json", { cache: "no-store" })
-      .then(r => r.json())
-      .then(items => {
-        ALL_ITEMS = Array.isArray(items) ? items : [];
-        loading?.remove();
-        buildFilters(ALL_ITEMS);
-        applyFilter();
-      })
-      .catch(() => {
-        loading?.remove();
-        grid.innerHTML = `<div class="text-center py-12 col-span-full text-red-600 font-semibold">Failed to load menu.</div>`;
-      });
+    function normalizeMenu(json){
+      if(Array.isArray(json))return json;
+      if(json&&Array.isArray(json.items))return json.items;
+      if(json&&Array.isArray(json.menu))return json.menu;
+      if(json&&Array.isArray(json.categories)){
+        return json.categories.flatMap(c=>(c.items||[]).map(it=>({...it,category:it.category||c.name})));
+      }
+      return[];
+    }
+
+    async function loadMenu(){
+      const candidates=['./data/menu.json','./menu.json','/menu.json'];
+      for(const url of candidates){
+        try{
+          const res=await fetch(url,{cache:'no-store'});
+          if(!res.ok)throw new Error(`HTTP ${res.status}`);
+          const raw=await res.json();
+          const arr=normalizeMenu(raw);
+          if(arr.length){return arr;}
+        }catch(e){}
+      }
+      return[];
+    }
+
+    (async()=>{
+      const items=await loadMenu();
+      loading?.remove();
+      ALL_ITEMS=items;
+      if(!ALL_ITEMS.length){
+        grid.innerHTML=`<div class="text-center py-12 col-span-full text-red-600 font-semibold">Failed to load menu or menu is empty.</div>`;
+        return;
+      }
+      buildFilters(ALL_ITEMS);
+      applyFilter();
+    })();
+  </script>
+
+  <!-- ✅ ADD TO CART FIX -->
+  <script>
+    const CART_KEY='gkk_cart_v1';
+    const readCart=()=>{try{return JSON.parse(localStorage.getItem(CART_KEY)||'[]')}catch{return[]}};
+    const writeCart=(c)=>localStorage.setItem(CART_KEY,JSON.stringify(c));
+    const cartCountEl=document.getElementById('cart-count');
+    const updateCartCount=()=>{const t=readCart().reduce((s,it)=>s+(+it.qty||0),0);if(cartCountEl)cartCountEl.textContent=t?`${t} item${t>1?'s':''}`:'0 items';};
+    const slug=s=>String(s||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
+
+    function addToCart(it){
+      const c=readCart();
+      const id=String(it.id||it.name);
+      const i=c.findIndex(x=>String(x.id||x.name)===id);
+      if(i===-1)c.push({...it,qty:1});
+      else c[i].qty=(+c[i].qty||1)+1;
+      writeCart(c);
+      updateCartCount();
+    }
+
+    updateCartCount();
+
+    document.getElementById('menu-grid').addEventListener('click',(e)=>{
+      const btn=e.target.closest('button'); if(!btn) return;
+      const card=e.target.closest('article'); if(!card) return;
+      const name=card.querySelector('h3')?.textContent.trim()||'Item';
+      const priceText=card.querySelector('.price-tag')?.textContent.trim()||'₹0';
+      const price=parseFloat(priceText.replace(/[^\d.]/g,''))||0;
+      const img=card.querySelector('img')?.getAttribute('src')||'./images/placeholder.jpeg';
+      addToCart({id:slug(name),name,price,img,qty:1});
+      btn.disabled=true; const old=btn.textContent; btn.textContent='Added ✓'; setTimeout(()=>{btn.textContent=old; btn.disabled=false;},800);
+    });
   </script>
 </body>
 </html>

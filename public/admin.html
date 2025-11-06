@@ -1,31 +1,36 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Admin Panel – Ghar ka Khana</title>
   <meta name="description" content="Manage menu items, orders, and settings for Ghar ka Khana cloud kitchen.">
-  <link rel="icon" href="/images/logo.jpeg">
+  <link rel="icon" href="./images/logo.jpeg" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = { theme: { extend: {
-      colors: { brand: '#ff6b35', brand2: '#2a9d8f' }
-    }}}; 
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { brand: '#ff6b35', brand2: '#2a9d8f' }
+        }
+      }
+    };
   </script>
 </head>
+
 <body class="bg-gray-50 text-gray-900">
   <!-- Header -->
   <header class="sticky top-0 z-30 bg-white border-b border-gray-200 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <img src="/images/logo.jpeg" class="w-10 h-10" alt="Ghar ka Khana">
+        <img src="./images/logo.jpeg" class="w-10 h-10" alt="Ghar ka Khana" />
         <div>
           <span class="font-extrabold text-xl text-gray-900">Ghar ka Khana</span>
           <span class="block text-xs text-gray-500">Admin Panel</span>
         </div>
       </div>
       <div class="flex items-center gap-4">
-        <a href="/" class="text-sm text-gray-600 hover:text-brand transition-colors font-medium">View Website</a>
+        <a href="./index.html" class="text-sm text-gray-600 hover:text-brand transition-colors font-medium">View Website</a>
         <button id="logout-btn" class="px-4 py-2 rounded-lg bg-red-500 text-white font-semibold hover:bg-red-600 transition-colors text-sm">
           Logout
         </button>
@@ -33,9 +38,8 @@
     </div>
   </header>
 
-  <!-- Main Content -->
+  <!-- Main -->
   <main class="max-w-7xl mx-auto px-4 py-8">
-    <!-- Dashboard Header -->
     <div class="mb-8">
       <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900">Dashboard</h1>
       <p class="mt-2 text-gray-600">Manage your cloud kitchen operations</p>
@@ -51,7 +55,7 @@
         <p class="text-3xl font-extrabold text-gray-900" id="stat-orders">0</p>
         <p class="text-xs text-green-600 mt-1">+12% from yesterday</p>
       </div>
-      
+
       <div class="bg-white p-6 rounded-2xl border-2 border-gray-200 shadow-sm">
         <div class="flex items-center justify-between mb-2">
           <span class="text-sm font-semibold text-gray-600">Revenue</span>
@@ -60,7 +64,7 @@
         <p class="text-3xl font-extrabold text-gray-900" id="stat-revenue">₹0</p>
         <p class="text-xs text-green-600 mt-1">+8% from yesterday</p>
       </div>
-      
+
       <div class="bg-white p-6 rounded-2xl border-2 border-gray-200 shadow-sm">
         <div class="flex items-center justify-between mb-2">
           <span class="text-sm font-semibold text-gray-600">Menu Items</span>
@@ -69,7 +73,7 @@
         <p class="text-3xl font-extrabold text-gray-900" id="stat-items">0</p>
         <p class="text-xs text-gray-500 mt-1">Active items</p>
       </div>
-      
+
       <div class="bg-white p-6 rounded-2xl border-2 border-gray-200 shadow-sm">
         <div class="flex items-center justify-between mb-2">
           <span class="text-sm font-semibold text-gray-600">Customers</span>
@@ -80,7 +84,7 @@
       </div>
     </div>
 
-    <!-- Tab Navigation -->
+    <!-- Tabs -->
     <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden mb-8">
       <div class="flex border-b border-gray-200 overflow-x-auto">
         <button class="tab-btn active px-6 py-4 font-semibold text-sm border-b-2 border-brand text-brand whitespace-nowrap" data-tab="menu">
@@ -94,7 +98,7 @@
         </button>
       </div>
 
-      <!-- Menu Management Tab -->
+      <!-- Menu Tab -->
       <div id="menu-tab" class="tab-content p-6">
         <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
           <h2 class="text-2xl font-bold text-gray-900">Menu Items</h2>
@@ -102,17 +106,15 @@
             + Add New Item
           </button>
         </div>
-
-        <!-- Menu Items Table -->
         <div class="overflow-x-auto">
           <table class="w-full">
             <thead class="bg-gray-50 border-y border-gray-200">
               <tr>
-                <th class="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Item</th>
-                <th class="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Category</th>
-                <th class="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Price</th>
-                <th class="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Status</th>
-                <th class="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Actions</th>
+                <th class="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase">Item</th>
+                <th class="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase">Category</th>
+                <th class="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase">Price</th>
+                <th class="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase">Status</th>
+                <th class="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase">Actions</th>
               </tr>
             </thead>
             <tbody id="menu-table-body" class="divide-y divide-gray-200">
@@ -139,8 +141,6 @@
             <option>Completed</option>
           </select>
         </div>
-
-        <!-- Orders List -->
         <div id="orders-list" class="space-y-4">
           <div class="text-center py-8 text-gray-500">
             <div class="inline-block animate-spin rounded-full h-8 w-8 border-4 border-gray-300 border-t-brand mb-2"></div>
@@ -152,131 +152,36 @@
       <!-- Settings Tab -->
       <div id="settings-tab" class="tab-content hidden p-6">
         <h2 class="text-2xl font-bold text-gray-900 mb-6">Kitchen Settings</h2>
-        
         <div class="space-y-6 max-w-2xl">
-          <!-- Restaurant Info -->
           <div class="bg-gray-50 p-5 rounded-xl border border-gray-200">
             <h3 class="font-bold text-lg mb-4">Restaurant Information</h3>
             <div class="space-y-3">
               <div>
                 <label class="block text-sm font-semibold text-gray-700 mb-1">Kitchen Name</label>
-                <input type="text" value="Ghar ka Khana" class="w-full px-4 py-2 rounded-lg border-2 border-gray-300 focus:border-brand focus:outline-none">
+                <input type="text" value="Ghar ka Khana" class="w-full px-4 py-2 rounded-lg border-2 border-gray-300 focus:border-brand focus:outline-none" />
               </div>
               <div>
                 <label class="block text-sm font-semibold text-gray-700 mb-1">Phone Number</label>
-                <input type="tel" value="+91 99999 99999" class="w-full px-4 py-2 rounded-lg border-2 border-gray-300 focus:border-brand focus:outline-none">
+                <input type="tel" value="+91 99999 99999" class="w-full px-4 py-2 rounded-lg border-2 border-gray-300 focus:border-brand focus:outline-none" />
               </div>
               <div>
                 <label class="block text-sm font-semibold text-gray-700 mb-1">Email</label>
-                <input type="email" value="hello@gharkakhana.com" class="w-full px-4 py-2 rounded-lg border-2 border-gray-300 focus:border-brand focus:outline-none">
+                <input type="email" value="hello@gharkakhana.com" class="w-full px-4 py-2 rounded-lg border-2 border-gray-300 focus:border-brand focus:outline-none" />
               </div>
             </div>
           </div>
-
-          <!-- Operational Settings -->
-          <div class="bg-gray-50 p-5 rounded-xl border border-gray-200">
-            <h3 class="font-bold text-lg mb-4">Operational Settings</h3>
-            <div class="space-y-3">
-              <div class="flex items-center justify-between">
-                <div>
-                  <p class="font-semibold text-gray-900">Accept Orders</p>
-                  <p class="text-sm text-gray-600">Enable/disable order acceptance</p>
-                </div>
-                <label class="relative inline-flex items-center cursor-pointer">
-                  <input type="checkbox" class="sr-only peer" checked>
-                  <div class="w-11 h-6 bg-gray-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-brand2"></div>
-                </label>
-              </div>
-              
-              <div>
-                <label class="block text-sm font-semibold text-gray-700 mb-1">Min. Order Amount</label>
-                <input type="number" value="100" class="w-full px-4 py-2 rounded-lg border-2 border-gray-300 focus:border-brand focus:outline-none">
-              </div>
-              
-              <div>
-                <label class="block text-sm font-semibold text-gray-700 mb-1">Delivery Radius (km)</label>
-                <input type="number" value="5" class="w-full px-4 py-2 rounded-lg border-2 border-gray-300 focus:border-brand focus:outline-none">
-              </div>
-            </div>
-          </div>
-
-          <!-- Save Button -->
-          <button class="w-full px-6 py-3 rounded-xl bg-brand text-white font-bold shadow-md hover:shadow-lg hover:bg-orange-600 transition-all">
-            Save Settings
-          </button>
         </div>
       </div>
     </div>
   </main>
 
-  <!-- Add/Edit Item Modal -->
-  <div id="item-modal" class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-    <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
-      <div class="sticky top-0 bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between">
-        <h3 class="text-xl font-bold text-gray-900" id="modal-title">Add New Item</h3>
-        <button id="close-modal-btn" class="text-gray-400 hover:text-gray-600 text-2xl leading-none">×</button>
-      </div>
-      
-      <form id="item-form" class="p-6 space-y-4">
-        <div>
-          <label class="block text-sm font-semibold text-gray-700 mb-1">Item Name *</label>
-          <input type="text" name="name" required class="w-full px-4 py-2 rounded-lg border-2 border-gray-300 focus:border-brand focus:outline-none">
-        </div>
-        
-        <div>
-          <label class="block text-sm font-semibold text-gray-700 mb-1">Description *</label>
-          <textarea name="description" rows="3" required class="w-full px-4 py-2 rounded-lg border-2 border-gray-300 focus:border-brand focus:outline-none resize-none"></textarea>
-        </div>
-        
-        <div class="grid sm:grid-cols-2 gap-4">
-          <div>
-            <label class="block text-sm font-semibold text-gray-700 mb-1">Price (₹) *</label>
-            <input type="number" name="price" required min="0" step="1" class="w-full px-4 py-2 rounded-lg border-2 border-gray-300 focus:border-brand focus:outline-none">
-          </div>
-          
-          <div>
-            <label class="block text-sm font-semibold text-gray-700 mb-1">Category *</label>
-            <select name="category" required class="w-full px-4 py-2 rounded-lg border-2 border-gray-300 focus:border-brand focus:outline-none">
-              <option value="">Select category</option>
-              <option value="thali">Thali</option>
-              <option value="rice">Rice Bowls</option>
-              <option value="breads">Breads</option>
-              <option value="curries">Curries</option>
-              <option value="snacks">Snacks</option>
-            </select>
-          </div>
-        </div>
-        
-        <div>
-          <label class="block text-sm font-semibold text-gray-700 mb-1">Image URL</label>
-          <input type="url" name="image" placeholder="https://example.com/image.jpg" class="w-full px-4 py-2 rounded-lg border-2 border-gray-300 focus:border-brand focus:outline-none">
-        </div>
-        
-        <div class="flex items-center gap-2">
-          <input type="checkbox" id="available" name="available" checked class="w-5 h-5 text-brand focus:ring-brand rounded">
-          <label for="available" class="text-sm font-semibold text-gray-700">Available for order</label>
-        </div>
-        
-        <div class="flex gap-3 pt-4">
-          <button type="submit" class="flex-1 px-6 py-3 rounded-xl bg-brand text-white font-bold shadow-md hover:shadow-lg hover:bg-orange-600 transition-all">
-            Save Item
-          </button>
-          <button type="button" id="cancel-modal-btn" class="px-6 py-3 rounded-xl border-2 border-gray-300 text-gray-700 font-bold hover:bg-gray-50 transition-all">
-            Cancel
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <!-- Footer -->
   <footer class="border-t border-gray-200 mt-16 bg-white">
     <div class="max-w-7xl mx-auto px-4 py-6 text-sm text-gray-600 text-center">
       <p>© <span id="year"></span> Ghar ka Khana Admin Panel • v1.0</p>
     </div>
   </footer>
 
-  <script src="/js/main.js"></script>
-  <script src="/js/admin.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/admin.js"></script>
 </body>
 </html>

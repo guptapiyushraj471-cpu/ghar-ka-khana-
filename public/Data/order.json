@@ -1,0 +1,88 @@
+[
+  {
+    "id": "ORD001",
+    "createdAt": "2025-11-04T10:15:00Z",
+    "customer": {
+      "name": "Ravi Sharma",
+      "phone": "9999999999",
+      "address": "Sector 21, Indore, MP"
+    },
+    "items": [
+      { "id": "veg-thali", "name": "Veg Thali", "qty": 2, "price": 149 },
+      { "id": "boondi-raita", "name": "Boondi Raita", "qty": 1, "price": 49 }
+    ],
+    "total": 347,
+    "paymentMethod": "UPI",
+    "notes": "No onion please.",
+    "status": "PLACED"
+  },
+  {
+    "id": "ORD002",
+    "createdAt": "2025-11-04T11:30:00Z",
+    "customer": {
+      "name": "Neha Verma",
+      "phone": "8888888888",
+      "address": "MG Road, Indore"
+    },
+    "items": [
+      { "id": "paneer-paratha", "name": "Paneer Paratha (2 pcs)", "qty": 1, "price": 99 },
+      { "id": "masala-chaas", "name": "Masala Chaas", "qty": 1, "price": 39 }
+    ],
+    "total": 138,
+    "paymentMethod": "Cash",
+    "notes": "",
+    "status": "CONFIRMED"
+  },
+  {
+    "id": "ORD003",
+    "createdAt": "2025-11-04T12:45:00Z",
+    "customer": {
+      "name": "Amit Joshi",
+      "phone": "7777777777",
+      "address": "Vijay Nagar, Indore"
+    },
+    "items": [
+      { "id": "rajma-chawal", "name": "Rajma Chawal", "qty": 1, "price": 129 },
+      { "id": "green-salad", "name": "Green Salad", "qty": 1, "price": 39 },
+      { "id": "gulab-jamun", "name": "Gulab Jamun", "qty": 1, "price": 99 }
+    ],
+    "total": 267,
+    "paymentMethod": "Card",
+    "notes": "Deliver by 1:15 PM.",
+    "status": "DISPATCHED"
+  },
+  {
+    "id": "ORD004",
+    "createdAt": "2025-11-04T14:05:00Z",
+    "customer": {
+      "name": "Sneha Patel",
+      "phone": "9998887776",
+      "address": "Scheme 54, Indore"
+    },
+    "items": [
+      { "id": "paneer-butter-masala", "name": "Paneer Butter Masala", "qty": 1, "price": 169 },
+      { "id": "butter-naan", "name": "Butter Naan", "qty": 2, "price": 45 }
+    ],
+    "total": 259,
+    "paymentMethod": "UPI",
+    "notes": "Extra gravy please.",
+    "status": "DELIVERED"
+  },
+  {
+    "id": "ORD005",
+    "createdAt": "2025-11-04T15:30:00Z",
+    "customer": {
+      "name": "Karan Mehta",
+      "phone": "7776665554",
+      "address": "Vijay Nagar, Near Sayaji Hotel"
+    },
+    "items": [
+      { "id": "dal-makhani", "name": "Dal Makhani", "qty": 1, "price": 159 },
+      { "id": "jeera-rice-dal", "name": "Jeera Rice with Dal Tadka", "qty": 1, "price": 129 }
+    ],
+    "total": 288,
+    "paymentMethod": "Card",
+    "notes": "Less oil please.",
+    "status": "CANCELLED"
+  }
+]
