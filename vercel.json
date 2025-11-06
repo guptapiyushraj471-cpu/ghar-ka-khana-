@@ -1,8 +1,15 @@
 {
   "cleanUrls": true,
   "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+
     { "source": "/menu", "destination": "/menu.html" },
+    { "source": "/menu/", "destination": "/menu.html" },
+
     { "source": "/order", "destination": "/order.html" },
-    { "source": "/admin", "destination": "/admin.html" }
+    { "source": "/order/", "destination": "/order.html" },
+
+    { "source": "/admin", "destination": "/admin.html" },
+    { "source": "/admin/", "destination": "/admin.html" }
   ]
 }
